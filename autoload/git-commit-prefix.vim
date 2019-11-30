@@ -15,6 +15,7 @@ function! git_commit_prefix#complete_prefixes(findstart, base)
       let start -= 1
     endwhile
     return start
+    let &l:completefunc='git_commit_prefix#complete_prefixes'
   else
     let res = []
     for m in split("feat: fix: docs: style: refactor: perf: test: chore:")
@@ -25,7 +26,6 @@ function! git_commit_prefix#complete_prefixes(findstart, base)
     return res
   endif
 endfunction
-set completefunc=git_commit_prefix#complete_prefixes
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
