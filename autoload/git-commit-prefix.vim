@@ -7,7 +7,7 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! git_commit_prefix#complete_prefixes(findstart, base)
+function! GitCommitPrefixes(findstart, base)
   if a:findstart
     let line = getline('.')
     let start = col('.') - 1
@@ -15,7 +15,6 @@ function! git_commit_prefix#complete_prefixes(findstart, base)
       let start -= 1
     endwhile
     return start
-    let &l:completefunc='git_commit_prefix#complete_prefixes'
   else
     let res = []
     for m in split("feat: fix: docs: style: refactor: perf: test: chore:")
@@ -26,6 +25,7 @@ function! git_commit_prefix#complete_prefixes(findstart, base)
     return res
   endif
 endfunction
+setlocal completefunc=GitCommitPrefixes
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
