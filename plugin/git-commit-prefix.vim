@@ -12,7 +12,5 @@ let g:loaded_git_commit_prefix = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-autocmd set completefunc=GitCommitPrefixes
-
 let &cpo = s:save_cpo
 unlet s:save_cpo
