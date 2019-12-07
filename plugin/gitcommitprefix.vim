@@ -9,4 +9,4 @@ scriptencoding utf-8
 " endif
 " let g:loaded_git_commit_prefix = 1
 
-nmap <C-k><C-k> <ESC>iHello World!!!
+nmap <C-k><C-k> <ESC>iHello World!!!!
