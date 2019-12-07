@@ -8,7 +8,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! HelloWorld()
-  echo 'HelloWorld'
+  echo "HelloWorld"
 endfunction
 
 function! GitCommitPrefixes(findstart, base)
@@ -32,5 +32,3 @@ endfunction
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
-
-set completefunc=GitCommitPrefixes

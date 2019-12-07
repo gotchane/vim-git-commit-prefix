@@ -12,5 +12,7 @@ let g:loaded_git_commit_prefix = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+nmap z :call HelloWorld()<CR>
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
