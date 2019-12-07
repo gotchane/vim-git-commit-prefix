@@ -25,7 +25,8 @@ function! GitCommitPrefixes(findstart, base)
     return res
   endif
 endfunction
-set completefunc=GitCommitPrefixes
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+set completefunc=GitCommitPrefixes
