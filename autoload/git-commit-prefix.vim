@@ -7,11 +7,11 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! HelloWorld()
+function! git_commit_prefix#helloworld()
   echo "HelloWorld"
 endfunction
 
-function! GitCommitPrefixes(findstart, base)
+function! git_commit_prefix#candidates(findstart, base)
   if a:findstart
     let line = getline('.')
     let start = col('.') - 1
