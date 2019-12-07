@@ -10,3 +10,4 @@ scriptencoding utf-8
 " let g:loaded_git_commit_prefix = 1
 
 nmap <C-k><C-k> <ESC>iHello World!!!!
+set completefunc=gitcommitprefix#candidates

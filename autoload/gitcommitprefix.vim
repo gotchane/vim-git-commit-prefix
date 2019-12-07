@@ -29,7 +29,6 @@ function! gitcommitprefix#candidates(findstart, base)
     return res
   endif
 endfunction
-set completefunc=gitcommitprefix#candidates
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
