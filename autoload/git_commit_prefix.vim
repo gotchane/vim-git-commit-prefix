@@ -7,8 +7,9 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
+let s:git_commit_prefix_candidates = ['feat: ', 'fix: ', 'docs: ', 'style: ', 'refactor: ', 'perf: ', 'test:', 'chore: ']
 func! git_commit_prefix#candidates()
-  call complete(col('.'), split("feat: fix: docs: style: refactor: perf: test: chore:"))
+  call complete(col('.'), s:git_commit_prefix_candidates)
   return ''
 endfunc
 
