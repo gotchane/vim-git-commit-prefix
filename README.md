@@ -42,3 +42,7 @@ When you commit changes by vim as git default editor, this plugin automatically 
 ```
 $ git commit
 ```
+
+## License
+
+MIT License
