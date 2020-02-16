@@ -17,7 +17,9 @@ let s:git_commit_prefix_candidates = [
   \ {'word': 'test: ', 'menu': 'Adding missing or correcting existing tests'},
   \ {'word': 'chore: ', 'menu': 'Changes to the build process or auxiliary tools and libraries such as documentation generation'}]
 func! git_commit_prefix#candidates()
-  call complete(col('.'), s:git_commit_prefix_candidates)
+  if empty(getline(1))
+    call complete(col('.'), s:git_commit_prefix_candidates)
+  endif
   return ''
 endfunc
 
