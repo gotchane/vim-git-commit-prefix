@@ -43,6 +43,12 @@ When you commit changes by vim as git default editor, this plugin automatically 
 $ git commit
 ```
 
+You can choose language from english(default) or japanese.
+```
+let g:git_commit_prefix_lang = 'en'  " or 'ja'
+```
+
+
 ## License
 
 MIT License
