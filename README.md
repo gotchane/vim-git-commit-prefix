@@ -48,7 +48,6 @@ You can choose the language for this plugin from English(default) or Japanese.
 let g:git_commit_prefix_lang = 'en'  " or 'ja'
 ```
 
-
 ## License
 
 MIT License
