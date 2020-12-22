@@ -8,6 +8,7 @@ if exists('g:loaded_git_commit_prefix')
 	finish
 endif
 let g:loaded_git_commit_prefix = 1
+let g:git_commit_prefix_lang = get(g:, "git_commit_prefix_lang", "en")
 
 augroup git_commit_prefix_settings
   autocmd!
